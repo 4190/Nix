@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Shortener.Dtos.ShortenedLinkDto>
+
+
+<table id="links" class="table table-hover">
+    <thead>
+        <tr>
+            <th>Original link</th>
+            <th>Short link</th>
+            <th>Views</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+                <tr class="hover">
+                    <td>@item.OriginalLink</td>
+                    <td>@item.ShortLink</td>
+                    <td>@item.Views</td>
+                </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts
+    {
+        <script>
+            $(document).ready(function () {
+                $('#links').DataTable();
+            });
+        </script>
+}

@@ -1,0 +1,4 @@
+﻿@model Shortener.Dtos.ShortenedLinkDto
+
+<h1>Your generated link: @Model.ShortLink </h1>
+<h3>You can find stats of your link under: @Environment.GetEnvironmentVariable("ASPNETCORE_URLS").Split(";")[0]/Details/@Model.ShortLink.Substring(Model.ShortLink.Length - 5) </h3>

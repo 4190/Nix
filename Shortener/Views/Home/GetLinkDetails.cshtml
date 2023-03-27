@@ -1,0 +1,12 @@
+﻿@model Shortener.Dtos.ShortenedLinkDto
+
+@if(Model != null)
+{
+    <h1>Original link: <a href="@Model.OriginalLink">@Model.OriginalLink</a></h1>
+    <h1>Shortened link: <a href="@Model.ShortLink">@Model.ShortLink</a></h1>
+    <h1>Views of shortened link: @Model.Views</h1>
+}
+else
+{
+    <h1>Specified short link is invalid or it does not exist yet.</h1>
+}
